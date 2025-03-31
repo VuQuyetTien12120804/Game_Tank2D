@@ -1,14 +1,14 @@
 package com.example.tank2d.presentation.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tank2d.R;
 
@@ -29,18 +29,42 @@ public class MenuGame extends AppCompatActivity {
 
         btnSetting.setOnClickListener(v -> {
             // Add intent to Setting Activity
+            Intent intent = new Intent(MenuGame.this, Setting.class);
+            startActivity(intent);
         });
 
-        btnPlayWithAI.setOnClickListener(v -> {
-            // Add intent to Game Activity with AI
-        });
+        if (btnPlayWithAI != null) {
+            btnPlayWithAI.setOnClickListener(v -> {
+                Intent intent = new Intent(MenuGame.this, GameMain.class);
+                startActivity(intent);
+            });
+        }
 
-        btnPlayWithFriend.setOnClickListener(v -> {
-            // Add intent to Multiplayer Game Activity
-        });
+        if (btnPlayWithFriend != null) {
+            btnPlayWithFriend.setOnClickListener(v -> {
+                Intent intent = new Intent(MenuGame.this, GameMain.class);
+                startActivity(intent);
+            });
+        }
 
         btnHelp.setOnClickListener(v -> {
-            // Add intent to Help Activity
+            showGameRulesDialog();
         });
+    }
+    private void showGameRulesDialog() {
+        // Tạo AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // Inflate layout tùy chỉnh
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_game_rules, null);
+        builder.setView(dialogView);
+
+        // Nút OK để đóng dialog
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+
+        // Hiển thị dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
