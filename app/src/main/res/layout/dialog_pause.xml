@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:gravity="center">
+
+    <!-- Tiêu đề Pause -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Các nút -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Nút Home -->
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_menu_manage"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Nút Replay -->
+        <ImageButton
+            android:id="@+id/btnReplay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_menu_rotate"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Nút Play -->
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@android:drawable/btn_default"/>
+    </LinearLayout>
+
+</LinearLayout>

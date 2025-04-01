@@ -25,6 +25,7 @@ public class MenuGame extends AppCompatActivity {
         btnPlayWithFriend = findViewById(R.id.btnPlayWithFriend);
         btnHelp = findViewById(R.id.btnHelp);
 
+
         btnExit.setOnClickListener(v -> finish());
 
         btnSetting.setOnClickListener(v -> {
