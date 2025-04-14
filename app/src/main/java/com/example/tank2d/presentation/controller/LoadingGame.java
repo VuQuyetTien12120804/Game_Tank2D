@@ -26,6 +26,6 @@ public class LoadingGame extends AppCompatActivity {
             Intent intent = new Intent(LoadingGame.this, MenuGame.class);
             startActivity(intent);
             finish(); // Đóng Activity hiện tại
-        }, 3000); // 3000ms = 3s
+        }, 10000); // 3000ms = 3s
     }
 }
