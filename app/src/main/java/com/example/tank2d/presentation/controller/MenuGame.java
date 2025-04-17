@@ -13,20 +13,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.tank2d.R;
 
 public class MenuGame extends AppCompatActivity {
-    Button btnExit, btnSetting,btnPlayWithFriend, btnPlayWithAI;
-    ImageButton btnHelp;
+    Button btnSetting,btnPlayWithFriend, btnPlayWithAI, btnHelp;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_game);
 
-        btnExit = findViewById(R.id.btnExit);
         btnSetting = findViewById(R.id.btnSetting);
         btnPlayWithAI = findViewById(R.id.btnPlayWithAI);
         btnPlayWithFriend = findViewById(R.id.btnPlayWithFriend);
         btnHelp = findViewById(R.id.btnHelp);
-
-
-        btnExit.setOnClickListener(v -> finish());
 
         btnSetting.setOnClickListener(v -> {
             // Add intent to Setting Activity
