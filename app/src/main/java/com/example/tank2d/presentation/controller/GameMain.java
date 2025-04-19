@@ -125,6 +125,8 @@ public class GameMain extends AppCompatActivity {
             btnPlay.setOnClickListener(v -> pauseDialog.dismiss());
         }
 
+        // Đặt nen màu nền cho dialog
+        pauseDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         // Hiển thị dialog
         pauseDialog.show();
     }

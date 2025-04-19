@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="@drawable/bg_loading">
 
     <!-- Tiêu đề Game Win -->
     <TextView
@@ -40,10 +40,10 @@
     <!-- Nút Exit -->
     <Button
         android:id="@+id/btnExit"
-        android:layout_width="wrap_content"
+        android:layout_width="103dp"
         android:layout_height="wrap_content"
-        android:text="Exit"
         android:background="@android:drawable/btn_default"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:text="Exit" />
 
 </LinearLayout>

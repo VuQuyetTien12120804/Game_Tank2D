@@ -57,10 +57,10 @@ public class MenuGame extends AppCompatActivity {
         builder.setView(dialogView);
 
         // Nút OK để đóng dialog
-        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
-
+        //builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
         // Hiển thị dialog
         AlertDialog dialog = builder.create();
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.show();
     }
 }

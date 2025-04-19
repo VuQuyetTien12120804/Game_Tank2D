@@ -18,8 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="22dp"
-        app:cardBackgroundColor="#80E7E5E5"
-        >
+        app:cardBackgroundColor="#80E7E5E5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
